@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production desktop build outputs
+dist-desktop/
+*.zip
+*.class
+src/*.class
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Output & binary test files
+*.huff
+
+# Sensitive user databases & server config overrides
+server/config/users.json
+server/config/audit_history.json
+
+# Track frontend production build
+!frontend/dist

@@ -1,0 +1,60 @@
+{
+  "name": "mosszip-studio",
+  "version": "2.4.0",
+  "description": "MossZip Studio - Premium File Compressor & Document Conversion Platform",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "cd server && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm install && npm run build",
+    "desktop": "electron .",
+    "build:icon": "node -e \"const pngToIco = require('png-to-ico').default; const fs = require('fs'); pngToIco('build/icon.png').then(buf => fs.writeFileSync('build/icon.ico', buf));\"",
+    "package:win": "npm run build:icon && electron-builder --win --dir",
+    "package:portable": "npm run build:icon && electron-builder --win portable",
+    "package:zip": "npm run build:icon && electron-builder --win zip"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.0",
+    "png-to-ico": "^3.0.2",
+    "rcedit": "^5.0.2",
+    "sharp": "^0.35.3"
+  },
+  "build": {
+    "appId": "com.mosszip.studio",
+    "productName": "MossZip Studio",
+    "directories": {
+      "output": "dist-desktop"
+    },
+    "files": [
+      "electron/**/*",
+      "server/**/*",
+      "frontend/dist/**/*",
+      "!**/node_modules/@capacitor/**",
+      "!**/android/**"
+    ],
+    "win": {
+      "target": "dir",
+      "icon": "build/icon.ico",
+      "sign": null,
+      "forceCodeSigning": false
+    }
+  },
+  "keywords": [
+    "file-compressor",
+    "huffman-encoding",
+    "video-compressor",
+    "pdf-tools",
+    "desktop-app"
+  ],
+  "author": "Ambali Parambil Shubham",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^8.5.0",
+    "@capacitor/cli": "^8.5.0",
+    "@capacitor/core": "^8.5.0",
+    "@capacitor/filesystem": "^8.1.2",
+    "@capacitor/share": "^8.0.1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "images_per_request": 10,
+  "videos_per_request": 2,
+  "pdfs_per_request": 10,
+  "max_total_upload_mb": 500,
+  "limits_enabled": true
+}

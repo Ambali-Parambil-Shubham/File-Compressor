@@ -1,0 +1,1 @@
+import{t as e}from"./vendor-supabase-1Hg6UP7W.js";var t=`https://jatnudehgesskiuaflez.supabase.co`,n=t.startsWith(`https://`)?e(t,`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImphdG51ZGVoZ2Vzc2tpdWFmbGV6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ5NTMwNTAsImV4cCI6MjA5MDUyOTA1MH0.JtpKgcEtFIpGZe5t4szQswFjGRA9DzR2k8Ju1xiFxuo`):null;export{n as t};

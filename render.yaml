@@ -1,0 +1,14 @@
+services:
+  # Unified MossZip Studio — Express API + Vite Static Frontend served together
+  - type: web
+    name: mosszip-file-compressor
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: cd server && npm install && cd ../frontend && npm install && npm run build
+    startCommand: cd server && node index.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
